@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cancel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+  <div class="ticket">
+    <div class="top">
+    </div>
+    <div class="mid">
+      <div class="left">
+  
+      </div>
+      <div class="qr">
+          <img class="qr-img" width="150" height="150" src="https://www.drupal.org/files/project-images/googleQRcodes.png">
+      </div>
+      <div class="line">
+  
+      </div>
+      <div class="content">
+          <div class="content-text">
+            <div class="table">
+              <div class="ticket-title">
+                La Clandestina
+              </div>
+              <div class="ticket-time">
+                <div class="ticket-date">
+                  Saturday, Feb 30, 2024
+                </div>
+                <div class="ticket-start-time">
+                  Starts: 10:00 PM
+                </div>
+              </div>
+            </div>
+            <div class="table">
+              <div class="ticket-check-in">
+               
+              </div>
+              <div class="ticket-data">
+                <div class="confirmation-info">
+                  <div class="contact">
+                    <div class="name">
+                      {{ name }} {{lastname}}
+                    </div>
+                    <div class="email">
+                      {{mail}}
+                    </div>
+                  </div>
+                </div>
+                <div class="ticket-info">
+                  <div></div>
+                  <div class="ticket-address">
+                    <div class="ticket-location">
+                        AMC 29 Somewhere City<br>
+                        1234 N. Something Blvd<br>
+                        Somewhere City, CA, 99999<br>
+                    </div>
+                    <div class="ticket-link">
+                      <a href="undefined" target="_blank">View map</a>
+                    </div>
+                  </div>
+                    <div class="ticket-recruiter">
+                      <span class="recruiter-code">Recruiter Code:</span>
+                      <br>RECRUITER00
+                    </div>
+                </div>
+              </div>
+            </div>
+              <div class="non-transfer">This party is until after sunrise</div>
+            </div>
+            </div>
+            
+      </div>
+      <div class="right">
+  
+      </div>
+    </div>
+    <div class="btm">
+  
+    </div>
+  </div>
+  </html>
