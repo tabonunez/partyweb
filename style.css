@@ -1,0 +1,180 @@
+.clearfix{
+    clear: both
+}
+ p{
+    margin: 0;
+    color: #727c88;
+    font-family: sans-serif;
+    line-height: 1.4
+}
+
+
+ hr{
+    width: 70px;
+    border: 1.5px solid #ed862c;
+    margin-bottom: 0
+}
+*{
+    box-sizing: border-box;
+}
+body{
+  margin:0;
+    height: 4793px;
+}
+
+.container{
+    width: 1020px;
+    margin: auto;
+    padding-left: 67px;
+}
+
+/*Start Header*/
+
+
+header{
+    margin: 0;
+    height: 1000px;
+    background-image: url(0ff4252f-ff0c-479f-b9ed-6669f4d6d3dd.jpg);
+    background-size: contain;
+    color: #FFF;
+    text-align: center;  
+}
+
+header slider h5{
+    float: left;
+    padding: 10px 0 0 25px;
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+header slider h5 span{color: #ed862c}
+
+header slider .high {
+    float: left;
+    padding: 31px 0 0 94px; 
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+header slider .high a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+header slider .high a:hover{
+    color: #ed862c;
+}
+
+header slider .high a:last-of-type{
+    margin-left: 40px;
+}
+
+header slider .plus{
+    float: right;
+    margin-top: -4px;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 20px;
+    font-family: sans-serif
+}
+
+header slider .plus .dropdown{
+    border: none;
+    position: relative;
+    display: inline-block;
+    margin-right: 27px;
+    background: none;
+    color: #ed862c;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+header slider .plus .dropdown .links{
+  display: none;
+  position: absolute;
+  
+  background-color: #693902;
+}
+
+header slider .plus .dropdown .links p{
+  padding:10px 32px;
+  border-bottom:1px solid #fff
+}
+
+header slider .plus .dropdown .links p:last-child {border-bottom:none}
+
+header slider .plus .dropdown .links p:hover{
+  color:#ED862C;
+}
+
+header slider .plus .dropdown:hover .links{
+  display: block;
+}
+
+
+header slider .plus a{
+    text-decoration: none;
+    color: #FFF;
+    padding-right: 30px;
+}
+
+header slider .plus a:hover{color: #ed862c}
+
+header slider .plus button{
+    margin-top: 25px;
+    background-color: #ed862c;
+    height: 30px;
+    width: 80px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 11px;
+    color: #FFF;
+    border: none;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+header slider .plus button:hover{
+    background-color: #FFF;
+    color: #ed862c; 
+}
+
+header slider h1{
+    margin: 0px ;
+    padding-top: 245px;
+    font-size: 49px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+header slider p{
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-align: center;
+    color: #FFF;
+}
+
+header slider button{
+    margin-top: 25px;
+    background-color: #ed862c;
+    height: 39px;
+    width: 180px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFF;
+    border: none;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+header slider button:hover{
+    background-color: #FFF;
+    color: #ed862c;
+}

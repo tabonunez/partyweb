@@ -1,0 +1,224 @@
+
+  .ticket {
+    min-width: 967px;
+    max-width: 967px;
+    font-size: 0;
+    font-family: 'Verdana', 'Arial', 'sans-serif';
+    font-size-adjust: 0.58;
+  }
+  
+  .top {
+    height: 43px;
+    background: url('https://24h.rip/tnraiS30.jpg') no-repeat;
+  }
+  
+  .mid {
+    display: inline-block;
+  }
+  
+  .btm {
+    height: 17px;
+    background: url('https://24h.rip/tnraxS30.jpg') no-repeat;
+  }
+  
+  .left {
+    display: inline-block;
+    width: 100px;
+    height: 262px;
+    background: url('https://24h.rip/tnrarS30.jpg') no-repeat;
+  }
+  
+  .right {
+
+    height: 262px;
+    display: inline-block;
+    width: 100px;
+    background: url('https://24h.rip/tnrauS30.jpg') no-repeat;
+  }
+  
+  .qr {
+    height: 262px;
+    display: inline-block;
+    width: 155px;
+  }
+  
+  .line {
+    height: 262px;
+    display: inline-block;
+    width: 55px;
+    background: url('https://24h.rip/tnrapS30.jpg') no-repeat;
+  }
+  
+  .content {
+    height: 262px;
+    display: inline-block;
+    width: 557px;
+  }
+  
+  .qr-img {
+    display: block;
+    margin-top: 28%;
+  }
+  
+  .content-text {
+    display: table;
+    font-size: 12pt;
+    width: inherit;
+  }
+  
+  .ticket-title {
+    font-size: calc(19px + (24 - 19) * ((100vw - 300px) / (1300)));
+    font-weight: bold;
+    text-transform: uppercase;
+    display: table-caption;
+  }
+  
+  .ticket-qr {
+    margin: 20px;
+    padding-right: 20px;
+  }
+  
+  .ticket-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--pfm-dark) 20%, rgba(0, 0, 0, 0) 0%);
+    background-position: left;
+    background-size: 3px 14px;
+    background-repeat: repeat-y;
+  }
+  
+  .ticket-row {
+    display: table-caption;
+  }
+  
+  .ticket-time {
+    display: table-row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: calc(13px + (13 - 11) * ((100vw - 300px) / (1300)));
+  }
+  
+  .ticket-date {
+    display: table-cell;
+  }
+  
+  .ticket-start-time {
+    display: table-cell;
+    text-align: right;
+  }
+  
+  .ticket-check-in {
+    display: table-caption;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 8px;
+    font-size: calc(13px + (13 - 11) * ((100vw - 300px) / (1300)));
+  }
+  
+
+  
+  .ticket-location {
+    text-align: right;
+    font-size: calc(10px + (12 - 10) * ((100vw - 300px) / (1300)));
+  }
+  
+  .ticket-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid green;
+  }
+  
+  .confirmation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid green;
+  }
+  
+  .ticket-recruiter {
+    text-align: right;
+    font-size: calc(13px + (13 - 11) * ((100vw - 300px) / (1300)));
+  }
+  
+  .ticket-link {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: calc(5px + (7 - 5) * ((100vw - 300px) / (1300)));
+  }
+  
+  .ticket-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    border: 2px solid green;
+  }
+  
+  .ticket-message {
+    margin-bottom: 20px;
+  }
+  
+  .recruiter-code {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: calc(8px + (10 - 8) * ((100vw - 300px) / (1300)));
+  }
+  
+  .name {
+    font-size: calc(19px + (25 - 19) * ((100vw - 300px) / (1300)));
+  }
+  
+  .email {
+    font-size: calc(11px + (17 - 11) * ((100vw - 300px) / (1300)));
+  }
+  
+  .children {
+    padding-top: 10px;
+    font-size: calc(9px + (12 - 9) * ((100vw - 300px) / (1300)));
+  }
+  
+  .guests {
+    padding-top: 10px;
+    font-size: calc(9px + (12 - 9) * ((100vw - 300px) / (1300)));
+    border: 2px solid green;
+  }
+  
+  .guest-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: calc(8px + (10 - 8) * ((100vw - 300px) / (1300)));
+  }
+  
+  .children-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: calc(8px + (10 - 8) * ((100vw - 300px) / (1300)));
+  }
+  
+  .non-transfer {
+    margin-left: 0;
+    margin-top: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: calc(9px + (11 - 9) * ((100vw - 300px) / (1300)));
+  }
+  
+  .table {
+    display: table;
+    width: 100%;
+  }
+  
