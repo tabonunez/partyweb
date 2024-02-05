@@ -55,9 +55,10 @@
             <input type="text" id="Name1" placeholder="Name" required/>
             <input type="text" id="Lastname1" placeholder="Last Name" required/>
             <input type="text" id="Mail1" placeholder="Mail" required/>
+            <div id="messageBox"></div>
             <div class="buttom-container">
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <form id="checkout-form" action="http://127.0.0.1:4242/create-checkout-session" method="POST">
+                <form id="checkout-form"  action="http://127.0.0.1:4242/create-checkout-session" method="POST" onclick="checkEmail(event)">
                     <input type="hidden" name="quantity" id="checkout-quantity" value="1"/>
                     <input type="hidden" name="Name" id= Name-ch placeholder="Name"value ='1'/>
                     <input type="hidden" name="Lastname" id= LastName-ch placeholder="Last Name" value="1"/>
@@ -76,7 +77,29 @@
     <script src="static/next.js"></script>
     <script src="static/script.js"></script>
 
+    <script>
+        function checkEmail() {
+            const email = document.getElementById('Mail1').value;
+            const messageBox = document.getElementById('messageBox');
 
+            fetch(`http://127.0.0.1:4242/checkEmail/${email}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.exists==true) {
+                        console.log('Email exists. Displaying warning message.');
+                        // Email exists in the database, display warning message
+                        messageBox.innerHTML = '<div style="color: red;">Mail already used for another purchase</div>';
+                        console.log(data)
+                    } 
+                })
+                .catch(error => {
+                    // Handle errors
+                    console.error(error);
+                    messageBox.innerHTML = '<div style="color: red;">An error occurred. Please try again.</div>';
+                });
+        }
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Function to check if visible inputs are filled before submitting
@@ -125,6 +148,11 @@
   });
   
   </script>
+
+
+
+
+
 </body>
 </html>
 

@@ -9,7 +9,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 
 /*custom font*/
-@import url(ttps://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
 * {

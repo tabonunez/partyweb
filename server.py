@@ -1,8 +1,11 @@
 # Import necessary modules
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, jsonify
 from urllib.parse import urlencode
 import stripe
 from mail import *
+from sql import *
+
+
 # Set your Stripe API key
 stripe.api_key = 'sk_test_51OV2PoJNKpDwUsDXGgmoFwX4dTAJXJG2LIp5zhe8PSdRYK1f6LfkjMHsKP5okfMr77zOYicoGI6rzp2ogdDdu3kB00ZYSqpyE8'
 
@@ -76,6 +79,8 @@ def create_checkout_session():
     # Redirect the user to the checkout session
     return redirect(checkout_session.url, code=303)
 
+
+
 @app.route('/cancel.html')
 def cancel():
     # Retrieve information from the query parameters
@@ -83,12 +88,35 @@ def cancel():
     lastname = request.args.get('lastname')
     mail = request.args.get('mail')
     send_mail(mail,name)
+    insert_sql(mail,name,lastname)
 
     return render_template('/cancel.html', name=name, lastname=lastname, mail=mail)
 
 @app.route('/success.html')
 def success():
     return render_template('/success.html')
+
+
+@app.route('/checkEmail/<email>', methods=['GET'])
+def check_email(email):
+    try:
+        # Connect to the SQLite database
+        conn = sqlite3.connect('your_database.db')
+        cursor = conn.cursor()
+
+        # Execute a SELECT query to check if the email exists
+        cursor.execute('SELECT COUNT(*) FROM contacts WHERE email = ?', (email,))
+        count = cursor.fetchone()[0]
+
+        # Close the connection
+        conn.close()
+
+        # Return JSON response indicating if the email exists
+        return jsonify({'exists': count > 0})
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({'error': 'Internal Server Error'}), 500
 
 # Run the application on port 4242
 if __name__ == '__main__':
