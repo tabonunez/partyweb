@@ -15,6 +15,11 @@ app = Flask(__name__,
 YOUR_DOMAIN = 'http://127.0.0.1:4242'
 
 # Route to render the checkout template with a specific quantity
+
+
+@app.route('/')
+def index():
+    return render_template('web.html')
 @app.route('/checkout/<int:quantity>', methods=['GET'])
 def checkout(quantity):
     return render_template('checkout.html', quantity=quantity)
@@ -87,4 +92,4 @@ def success():
 
 # Run the application on port 4242
 if __name__ == '__main__':
-    app.run(port=4242)
+    app.run(debug=True, port=4242)

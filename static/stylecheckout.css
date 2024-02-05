@@ -458,10 +458,7 @@ label {
 }
 
 
-
-.checkout,
-.previous{
+.buttom-container {
   display: flex;
-  justify-content: center; /* Distribute space between the buttons */;
-
+  justify-content: center;
 }
